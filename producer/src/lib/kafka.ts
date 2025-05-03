@@ -1,6 +1,6 @@
 import { Kafka, logLevel } from "kafkajs";
 
-const kafka = new Kafka({
+export const kafka = new Kafka({
   clientId: "my-app",
   brokers: ["kafka:29092"],
   logLevel: logLevel.ERROR,
@@ -22,5 +22,3 @@ const main = async () => {
     console.error("Message:", e);
   }
 };
-
-main();
